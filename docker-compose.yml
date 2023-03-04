@@ -11,3 +11,8 @@ services:
       - .:/usr/src/app/
     ports:
       - "3001:3001"
+    environment:
+      - AUTH_API_PORT=3001
+      - AUTH_API_URL=http://${HOSTNAME}:3001
+      - AUTH_WEBSITE_PORT=3000
+      - AUTH_WEBSITE_URL=http://${HOSTNAME}:3000
