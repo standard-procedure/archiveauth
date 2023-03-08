@@ -4,15 +4,12 @@ import { TypeInput } from "supertokens-node/types";
 import Dashboard from "supertokens-node/recipe/dashboard";
 
 export function getApiDomain() {
-  const apiPort = process.env.AUTH_API_PORT || 3001;
-  const apiUrl = process.env.AUTH_API_URL || `http://localhost:${apiPort}`;
+  const apiUrl = process.env.AUTH_API_URL || `http://localhost:3001`;
   return apiUrl;
 }
 
 export function getWebsiteDomain() {
-  const websitePort = process.env.AUTH_WEBSITE_PORT || 3000;
-  const websiteUrl =
-    process.env.AUTH_WEBSITE_URL || `http://localhost:${websitePort}`;
+  const websiteUrl = process.env.AUTH_WEBSITE_URL || `http://localhost:3000`;
   return websiteUrl;
 }
 
